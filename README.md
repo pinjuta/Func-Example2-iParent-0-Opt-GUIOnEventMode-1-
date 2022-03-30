@@ -1,0 +1,2 @@
+# Func-Example2-iParent-0-Opt-GUIOnEventMode-1-
+  WEnd     $iExitLoop = 0     GUIDelete($hGUIParent1) EndFunc   ;==>Example1  Func Example2($iParent = 0)     Opt("GUIOnEventMode", 1)     $hGUIParent2 = GUICreate("Child", 300, 400, -1, -1, -1, -1, $iParent)     GUISetOnEvent($GUI_EVENT_CLOSE, "OnEvent_CLOSE_TWO", $hGUIParent2)     GUICtrlCreateButton("say hi", 8, 8)     GUICtrlSetOnEvent(-1, "GuiTwoSayHi")     GUISetState(@SW_SHOW)      While 1 ; Loop until the user exits.         Sleep(100)         If $iExitLoop Then ExitLoop
